@@ -1,0 +1,29 @@
+{
+  "env": {
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2022
+  },
+  "rules": {
+    "array-bracket-newline": ["error", {
+      "multiline": true
+    }],
+    "array-element-newline": ["error", {
+      "ArrayExpression": "consistent",
+      "ArrayPattern": "consistent"
+    }],
+    "function-call-argument-newline": ["error", "consistent"],
+    "function-paren-newline": ["warn", "consistent"],
+    "indent": ["error", 2],
+    "max-len": ["error", 100],
+    "object-curly-newline": ["error", {
+      "multiline": true
+    }],
+    "object-property-newline": ["error", {
+      "allowAllPropertiesOnSameLine": true
+    }],
+    "quotes": ["error", "double"]
+  }
+}

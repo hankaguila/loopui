@@ -1,0 +1,80 @@
+import { setTimeout } from "timers/promises";
+import Prompter from "../src/services/Prompter";
+import Caster from "../src/services/Caster";
+import Validator from "../src/services/Validator";
+
+let checkIndex = 0;
+
+const clearAndPrintTitle = (title: string) => {
+  console.clear();
+  console.log(`--- CHECK[${checkIndex}]: ${title} ---\n`);
+};
+
+async function checkAsksUntilInputWhenNoFallback() {
+  checkIndex += 1;
+  const title = "Asks until input is given when no fallback is specified";
+  const answer = await Prompter.ask({
+    prompt: "Enter name: ",
+    before: () => clearAndPrintTitle(title)
+  });
+  process.stdout.write(`\n${answer}`);
+}
+
+async function checkAskReturnsFallback() {
+  checkIndex += 1;
+  const title = "Returns fallback when no input is given and no validation is specified";
+  const answer = await Prompter.ask({
+    prompt: "Enter nothing: ",
+    fallback: null,
+    before: () => clearAndPrintTitle(title)
+  });
+  process.stdout.write(`\n${answer}`);
+}
+
+async function checkAsksUntilInputIsValid() {
+  checkIndex += 1;
+  const title = "Keeps asking until input can be cast and validated";
+  const answer = await Prompter.ask({
+    prompt: "Enter 1,2: ",
+    before: () => clearAndPrintTitle(title),
+    cast: Caster.toNumberArray,
+    validate: Validator.isNumberArray
+  });
+  process.stdout.write(`\n${answer}`);
+}
+
+async function checkSelectReturnsFallback() {
+  checkIndex += 1;
+  const title = "Returns fallback when no input is given";
+  const answer = await Prompter.select({
+    name: "color",
+    choices: ["red", "green", "blue"],
+    fallback: "red",
+    before: () => clearAndPrintTitle(title)
+  });
+  process.stdout.write(`\n${answer}`);
+}
+
+async function checkSelectsUntilValidChoiceIndex() {
+  checkIndex += 1;
+  const title = "Keeps asking for choice until valid index is given";
+  const answer = await Prompter.select({
+    name: "color",
+    choices: ["red", "green", "blue"],
+    before: () => clearAndPrintTitle(title)
+  });
+  process.stdout.write(`\n${answer}`);
+}
+
+// ask
+await checkAsksUntilInputWhenNoFallback();
+await setTimeout(1500);
+await checkAskReturnsFallback();
+await setTimeout(1500);
+await checkAsksUntilInputIsValid();
+await setTimeout(1500);
+
+// select
+await checkSelectReturnsFallback();
+await setTimeout(1500);
+await checkSelectsUntilValidChoiceIndex();

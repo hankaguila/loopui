@@ -1,0 +1,20 @@
+# exclude
+*
+
+# include
+!scripts
+!scripts/**
+!src
+!src/**
+!test
+!test/**
+!types
+!types/**
+!.eslintrc.json
+!.gitignore
+!.npmrc
+!example.gif
+!LICENSE
+!package.json
+!README.md
+!tsconfig.json
