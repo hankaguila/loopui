@@ -42,7 +42,7 @@ Build CLI apps for the ordinary user
 ## Installation
 
 ```bash
-npm i concli
+npm i loopui
 ```
 
 ## Example
@@ -53,7 +53,7 @@ Building a **LoopUI** app is done in two easy steps:
 2. Start it
 
 ```ts
-import { UI, Prompter, Caster, Validator } from "concli";
+import { UI, Prompter, Caster, Validator } from "loopui";
 
 Prompter.errorTimeoutMS = 1500; // set to 0 to disable error messages for faster UX
 
@@ -97,7 +97,7 @@ await ui.start();
 
 ## Documentation
 
-The ``concli`` package provides the following:
+The ``loopui`` package provides the following:
 
 - **UI** - The main instantiable class, represents a user-interface
 - **Prompter** - A static class, provides config & methods for getting input from user
@@ -109,7 +109,7 @@ guide. Nevertheless, some detail is provided next.
 
 ### UI
 
-This is the main class you'll need to instantiante and run. You pass in an object to the
+This is the main class you'll need to instantiate and run. You pass in an object to the
 constructor whose entries are:
 
 > A ``?`` in the type description, that means the entry is optional

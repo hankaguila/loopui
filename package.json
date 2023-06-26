@@ -1,6 +1,6 @@
 {
   "name": "loopui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build CLI apps for the ordinary user",
   "keywords": [
     "cli",
