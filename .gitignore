@@ -2,6 +2,8 @@
 *
 
 # include
+!check
+!check/**
 !src
 !src/**
 !test
