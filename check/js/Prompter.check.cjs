@@ -1,6 +1,6 @@
-import fs from "fs";
-import { setTimeout } from "timers/promises";
-import { Prompter, Caster, Validator } from "../../src";
+const fs = require("fs");
+const { setTimeout } = require("timers/promises");
+const { Prompter,  Caster, Validator } = require("../../dist/index.cjs");
 
 console.debug(setTimeout, Prompter, Caster, Validator, "\n");
 

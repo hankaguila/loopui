@@ -1,6 +1,5 @@
-import fs from "fs";
 import { setTimeout } from "timers/promises";
-import { Prompter, Caster, Validator } from "../../src";
+import { Prompter,  Caster, Validator } from "../../dist/index.mjs";
 
 console.debug(setTimeout, Prompter, Caster, Validator, "\n");
 
