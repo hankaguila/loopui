@@ -9,6 +9,7 @@ Build CLI apps for the ordinary user
 - [Why](#why)
 - [Installation](#installation)
 - [Example](#example)
+- [Documentation](#documentation)
 - [License](#license)
 
 ## Why
