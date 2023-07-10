@@ -1,18 +1,16 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "dist/types",
-    "emitDeclarationOnly": true,
     "esModuleInterop": true,
-    "lib": ["esnext"],
-    "module": "esnext",
+    "module": "es6",
     "moduleResolution": "node",
-    "outDir": "dist",
-    "rootDir": "src",
+    "outDir": "dist/",
+    "rootDirs": ["src", "types"],
     "strict": true,
-    "target": "esnext"
+    "target": "es6"
   },
   "include": [
-    "src"
+    "src",
+    "types"
   ]
 }

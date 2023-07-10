@@ -2,8 +2,6 @@
 *
 
 # include
-!scripts
-!scripts/**
 !src
 !src/**
 !test

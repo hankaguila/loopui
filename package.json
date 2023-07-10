@@ -1,6 +1,6 @@
 {
   "name": "loopui",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Build CLI apps for the ordinary user",
   "keywords": [
     "cli",
@@ -19,28 +19,30 @@
   },
   "homepage": "https://github.com/hankaguila/loopui#readme",
   "bugs": "https://github.com/hankaguila/loopui/issues",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "node": "node --experimental-specifier-resolution=node --no-warnings",
-    "test": "vitest --dir=test run --reporter=verbose",
+    "test": "vitest --dir=test run",
     "lint": "eslint src --fix",
-    "dist:types": "tsc && npm run node scripts/mergeDeclarationFiles.js && shx rm -rf dist/types && eslint dist/**/*.ts --fix",
-    "dist:cjs": "esbuild src/index.ts --bundle --format=cjs --platform=node --outfile=dist/index.cjs",
-    "dist:esm": "esbuild src/index.ts --bundle --format=esm --platform=node --outfile=dist/index.mjs",
-    "dist": "shx rm -rf dist && npm run dist:cjs && npm run dist:esm && npm run dist:types"
+    "dist:cjs": "tsup src/index.ts --format=cjs",
+    "dist:esm": "tsup src/index.ts --format=esm && shx mv dist/index.js dist/index.mjs",
+    "dist:dts": "tsup src/index.ts --dts-only --format=esm",
+    "dist": "shx rm -rf dist && npm run dist:cjs && npm run dist:esm && npm run dist:dts"
   },
   "devDependencies": {
     "@types/dedent": "^0.7.0",
     "@types/node": "^18.11.18",
     "@types/validator": "^13.7.17",
     "@typescript-eslint/parser": "^5.48.0",
-    "esbuild": "^0.18.7",
     "eslint": "8.22.0",
     "shx": "^0.3.4",
+    "tsup": "^7.1.0",
     "tsx": "^3.12.7",
     "typescript": "^4.9.5",
     "validator": "^13.9.0",
