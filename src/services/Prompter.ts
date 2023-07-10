@@ -24,12 +24,12 @@ export default class Prompter {
           rl.close();
           resolve();
         }
-      })
+      });
       rl.question(prompt ? prompt : "Press any key to continue...", () => {});
     });
   }
 
-  public static async ask(args: AskArgs): Promise<Value> {
+  public static ask(args: AskArgs): Promise<Value> {
     const { prompt, fallback, errorTimeoutMS, before, cast, validate } = args;
 
     const rl = readline.createInterface({
@@ -69,7 +69,7 @@ export default class Prompter {
     });
   }
 
-  public static async select(args: SelectArgs): Promise<Value> {
+  public static select(args: SelectArgs): Promise<Value> {
     const { name, choices, fallback, errorTimeoutMS, before } = args;
 
     const rl = readline.createInterface({

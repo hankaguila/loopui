@@ -6,9 +6,13 @@ import { Fields, Input, Run, RunArgs } from "../../types";
 
 export default class UI {
   public declare name: String;
+
   public declare shortDescription: String;
+
   public declare longDescription: String;
+
   public declare input: Record<string, Input>;
+
   public declare run: Run;
 
   private currentInput = "";
@@ -65,7 +69,7 @@ export default class UI {
       .map(([name, { value }]) => {
         const pre = this.currentInput === name ? "> " : "__";
         const post = value === undefined ? "<required>" : value;
-        return `${pre}${name}: ${post}`
+        return `${pre}${name}: ${post}`;
       })
       .join("\n");
 
