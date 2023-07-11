@@ -2,6 +2,10 @@
 
 Build CLI apps for the ordinary user
 
+- TypeScript supported
+- CommonJS (Node.js) supported
+- ECMAScript Modules (ESM) supported
+
 ![Example](example.gif)
 
 ## Table of Contents
