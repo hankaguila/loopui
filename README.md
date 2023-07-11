@@ -6,6 +6,9 @@ Build CLI apps for the ordinary user
 - CommonJS (Node.js) supported
 - ECMAScript Modules (ESM) supported
 
+[![npm-version](https://img.shields.io/npm/v/loopui.svg)](https://www.npmjs.com/package/loopui)
+[![npm-downloads](https://img.shields.io/npm/dm/loopui.svg)](https://npmcharts.com/compare/loopui?minimal=true)
+
 ![Example](example.gif)
 
 ## Table of Contents
