@@ -5,12 +5,14 @@
     "module": "esnext",
     "moduleResolution": "node",
     "outDir": "dist/",
-    "rootDirs": ["src", "types"],
+    "rootDirs": ["src",
+      "type"
+    ],
     "strict": true,
     "target": "es6"
   },
   "include": [
     "src",
-    "types"
+    "type"
   ]
 }
