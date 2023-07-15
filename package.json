@@ -20,20 +20,20 @@
   "homepage": "https://github.com/hankaguila/loopui#readme",
   "bugs": "https://github.com/hankaguila/loopui/issues",
   "files": [
-    "dist"
+    "build"
   ],
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "build/index.cjs",
+  "module": "build/index.mjs",
+  "types": "build/index.d.ts",
   "type": "module",
   "scripts": {
     "node": "node --experimental-specifier-resolution=node --no-warnings",
     "test": "vitest --dir=test run",
     "lint": "eslint src --fix",
-    "dist:cjs": "tsup src/index.ts --format=cjs",
-    "dist:esm": "tsup src/index.ts --format=esm && shx mv dist/index.js dist/index.mjs",
-    "dist:dts": "tsup src/index.ts --dts-only --format=esm",
-    "dist": "shx rm -rf dist && npm run dist:cjs && npm run dist:esm && npm run dist:dts"
+    "build:cjs": "tsup src/index.ts -d=build --format=cjs",
+    "build:esm": "tsup src/index.ts -d=build --format=esm && shx mv build/index.js build/index.mjs",
+    "build:dts": "tsup src/index.ts -d=build --dts-only --format=esm",
+    "build": "shx rm -rf build && npm run build:cjs && npm run build:esm && npm run build:dts"
   },
   "devDependencies": {
     "@types/dedent": "^0.7.0",

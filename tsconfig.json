@@ -4,8 +4,9 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "outDir": "dist/",
-    "rootDirs": ["src",
+    "outDir": "build/",
+    "rootDirs": [
+      "src",
       "type"
     ],
     "strict": true,

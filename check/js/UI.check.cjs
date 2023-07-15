@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { UI, Prompter, Caster, Validator } = require("../../dist/index.cjs");
+const { UI, Prompter, Caster, Validator } = require("../../build/index.cjs");
 
 console.debug({UI, Prompter, Caster, Validator }, "\n");
 

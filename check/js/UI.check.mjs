@@ -1,5 +1,5 @@
 import fs from "fs";
-import { UI, Prompter, Caster, Validator } from "../../dist/index.mjs";
+import { UI, Prompter, Caster, Validator } from "../../build/index.mjs";
 
 console.debug({UI, Prompter, Caster, Validator }, "\n");
 

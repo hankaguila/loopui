@@ -1,5 +1,5 @@
 import { setTimeout } from "timers/promises";
-import { Prompter,  Caster, Validator } from "../../dist/index.mjs";
+import { Prompter,  Caster, Validator } from "../../build/index.mjs";
 
 console.debug(setTimeout, Prompter, Caster, Validator, "\n");
 

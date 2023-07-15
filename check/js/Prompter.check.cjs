@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { setTimeout } = require("timers/promises");
-const { Prompter,  Caster, Validator } = require("../../dist/index.cjs");
+const { Prompter,  Caster, Validator } = require("../../build/index.cjs");
 
 console.debug(setTimeout, Prompter, Caster, Validator, "\n");
 
