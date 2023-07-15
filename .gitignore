@@ -8,8 +8,6 @@
 !src/**
 !test
 !test/**
-!type
-!type/**
 !.eslintrc.json
 !.gitignore
 !.npmrc

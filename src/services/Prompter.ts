@@ -2,7 +2,8 @@ import { Readable } from "stream";
 import readline from "readline";
 import { setTimeout } from "timers/promises";
 import dedent from "dedent";
-import { Value, AskArgs, SelectArgs } from "../../type";
+import { Value } from "../shared";
+import { AskArgs, SelectArgs } from "./types";
 
 export default class Prompter {
   public static errorTimeoutMS = 1500;

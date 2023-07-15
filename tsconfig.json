@@ -5,15 +5,11 @@
     "module": "esnext",
     "moduleResolution": "node",
     "outDir": "build/",
-    "rootDirs": [
-      "src",
-      "type"
-    ],
+    "rootDir": "src",
     "strict": true,
     "target": "es6"
   },
   "include": [
-    "src",
-    "type"
+    "src"
   ]
 }

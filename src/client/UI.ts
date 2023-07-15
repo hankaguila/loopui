@@ -1,8 +1,7 @@
 import { setTimeout } from "timers/promises";
 import dedent from "dedent";
-import Prompter from "../services/Prompter";
-import Caster from "../services/Caster";
-import { Fields, Input, Run, RunArgs } from "../../type";
+import { Fields, Input, Run, RunArgs } from "./types";
+import { Caster, Prompter } from "../services";
 
 export default class UI {
   public declare name: String;

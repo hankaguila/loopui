@@ -1,4 +1,4 @@
-import { Validate, Value } from "../common";
+import { Validate, Value } from "../shared";
 
 export interface AskArgs {
   prompt: string;
