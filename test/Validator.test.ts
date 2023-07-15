@@ -1,5 +1,6 @@
 import { assert, it } from "vitest";
-import Validator from "../src/services/Validator";
+// import { Validator } from "../src";
+import { Validator } from "../build";
 
 it("isString()", () => {
   assert(!Validator.isString(1));

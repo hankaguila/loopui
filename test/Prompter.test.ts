@@ -1,7 +1,7 @@
 import { beforeAll, describe, expect, it } from "vitest";
 import { Readable } from "stream";
-import Prompter from "../src/services/Prompter";
-import Caster from "../src/services/Caster";
+// import { Prompter, Caster } from "../src";
+import { Prompter, Caster } from "../build";
 
 beforeAll(() => {
   Prompter["stdin"] = new Readable({ read() { } });

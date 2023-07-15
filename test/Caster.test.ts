@@ -1,5 +1,6 @@
 import { expect, it } from "vitest";
-import Caster from "../src/services/Caster";
+// import { Caster } from "../src";
+import { Caster } from "../build";
 
 it("toStringArray()", () => {
   expect(Caster.toStringArray("Hi")).to.eql(["Hi"]);
